@@ -24,15 +24,12 @@ class AHuntTaskforceCharacter : public ACharacter
 
 public:
 	AHuntTaskforceCharacter();
-
-protected:
+	
 	virtual void BeginPlay();
 	ENetRole localRole;
 	
 	UPROPERTY(EditDefaultsOnly,BlueprintReadWrite, Category = "Character")
     USkeletalMeshComponent* CharacterBody;
-
-public:
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseTurnRate;
@@ -41,16 +38,17 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	virtual void onAttack();
+	virtual void onAbility();
+	virtual void onStart();
+
 protected:
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
 
 	/** Handles stafing movement, left and right */
 	void MoveRight(float Val);
-protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
-
-public:
 };
 

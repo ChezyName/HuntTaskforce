@@ -18,6 +18,12 @@ DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 //////////////////////////////////////////////////////////////////////////
 // AHuntTaskforceCharacter
 
+//Overriden Virtual Funcs Used by Each Game Character
+// IE: Human & Monster
+void AHuntTaskforceCharacter::onAttack(){}
+void AHuntTaskforceCharacter::onAbility(){}
+void AHuntTaskforceCharacter::onStart(){}
+
 AHuntTaskforceCharacter::AHuntTaskforceCharacter()
 {
 	// Set size for collision capsule
@@ -65,6 +71,9 @@ void AHuntTaskforceCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	// Bind jump events
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+
+	PlayerInputComponent->BindAction("Ability", IE_Pressed, this, &AHuntTaskforceCharacter::onAbility);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AHuntTaskforceCharacter::onAttack);
 
 	// Bind movement events
 	PlayerInputComponent->BindAxis("MoveForward", this, &AHuntTaskforceCharacter::MoveForward);
