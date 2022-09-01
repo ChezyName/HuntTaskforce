@@ -1,6 +1,9 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "HuntTaskforceCharacter.h"
+
+#include <string>
+
 #include "HuntTaskforceProjectile.h"
 #include "Animation/AnimInstance.h"
 #include "Camera/CameraComponent.h"
@@ -9,8 +12,11 @@
 #include "GameFramework/InputSettings.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "Kismet/GameplayStatics.h"
+#include "Net/UnrealNetwork.h"
 #include "MotionControllerComponent.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
+#include "Components/SpotLightComponent.h"
+#include "GameFramework/SpringArmComponent.h"
 #include "Windows/LiveCodingServer/Public/ILiveCodingServer.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
@@ -24,6 +30,11 @@ void AHuntTaskforceCharacter::onAttack(){}
 void AHuntTaskforceCharacter::onAbility(){}
 void AHuntTaskforceCharacter::onStart(){}
 
+void AHuntTaskforceCharacter::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+}
+
 AHuntTaskforceCharacter::AHuntTaskforceCharacter()
 {
 	// Set size for collision capsule
@@ -36,7 +47,7 @@ AHuntTaskforceCharacter::AHuntTaskforceCharacter()
 	// Create a CameraComponent	
 	FirstPersonCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	FirstPersonCameraComponent->SetupAttachment(GetCapsuleComponent());
-	FirstPersonCameraComponent->SetRelativeLocation(FVector(-39.56f, 1.75f, 64.f)); // Position the camera
+	FirstPersonCameraComponent->SetRelativeLocation(FVector(0,1.75,74.0)); // Position the camera
 	FirstPersonCameraComponent->bUsePawnControlRotation = true;
 }
 
@@ -63,6 +74,14 @@ void AHuntTaskforceCharacter::BeginPlay()
 //////////////////////////////////////////////////////////////////////////
 // Input
 
+void AHuntTaskforceCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME_CONDITION(AHuntTaskforceCharacter,forwardSpeed,COND_SkipOwner);
+	DOREPLIFETIME_CONDITION(AHuntTaskforceCharacter,rightSpeed,COND_SkipOwner);
+}
+
 void AHuntTaskforceCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	// set up gameplay key bindings
@@ -88,18 +107,26 @@ void AHuntTaskforceCharacter::SetupPlayerInputComponent(class UInputComponent* P
 
 void AHuntTaskforceCharacter::MoveForward(float Value)
 {
-	if (Value != 0.0f)
+	if (IsLocallyControlled())
 	{
-		// add movement in that direction
-		AddMovementInput(GetActorForwardVector(), Value);
+		forwardSpeed = Value;
+		if (Value != 0.0f)
+		{
+			// add movement in that direction
+			AddMovementInput(GetActorForwardVector(), Value);
+		}
 	}
 }
 
 void AHuntTaskforceCharacter::MoveRight(float Value)
 {
-	if (Value != 0.0f)
+	if (IsLocallyControlled())
 	{
-		// add movement in that direction
-		AddMovementInput(GetActorRightVector(), Value);
+		rightSpeed = Value;
+		if (Value != 0.0f)
+		{
+			// add movement in that direction
+			AddMovementInput(GetActorRightVector(), Value);
+		}
 	}
 }

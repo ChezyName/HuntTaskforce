@@ -42,6 +42,13 @@ public:
 	virtual void onAbility();
 	virtual void onStart();
 
+	void Tick(float DeltaSeconds) override;
+
+	UPROPERTY(Replicated,BlueprintReadOnly)
+	float forwardSpeed = 0;
+	UPROPERTY(Replicated,BlueprintReadOnly)
+	float rightSpeed = 0;
+
 protected:
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);

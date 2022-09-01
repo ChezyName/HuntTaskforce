@@ -7,9 +7,19 @@
   <component name="ChangeListManager">
     <list default="true" id="def18e5f-0ca1-457e-9c3b-f8b7d76fdfc2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HuntTaskforce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuntTaskforce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Character/Human/Anims/Aim.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Character/Human/Anims/AimDown.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/Anims/AimDown.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Character/Human/Anims/AimForward.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/Anims/AimForward.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Character/Human/Anims/AimUp.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/Anims/AimUp.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Character/Human/BasicCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/BasicCharacter.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Character/Human/HumanC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/HumanC.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Character/Human/Human_ABP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/Human_ABP.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Human/Human.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Human/Human.blend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Human/Human.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Human/Human.blend1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.h" afterDir="false" />
     </list>
@@ -30,15 +40,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="C++ Project.HuntTaskforce">
     <configuration name="HuntTaskforce" type="CppProject" factoryName="C++ Project">
       <configuration_1>
@@ -265,6 +275,9 @@
       <workItem from="1661892722859" duration="2426000" />
       <workItem from="1661897345257" duration="1250000" />
       <workItem from="1661899841051" duration="8521000" />
+      <workItem from="1661970937562" duration="5629000" />
+      <workItem from="1662003450044" duration="1000" />
+      <workItem from="1662047731760" duration="11642000" />
     </task>
     <servers />
   </component>
