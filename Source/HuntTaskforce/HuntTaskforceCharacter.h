@@ -48,7 +48,6 @@ public:
 	float forwardSpeed = 0;
 	UPROPERTY(Replicated,BlueprintReadOnly)
 	float rightSpeed = 0;
-
 protected:
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);

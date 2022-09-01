@@ -54,18 +54,28 @@ void AHumanCharacter::FireShot_Implementation(){
 		DrawDebugBox(GetWorld(),RV_Hit.ImpactPoint,FVector(3,3,3),FColor::Red,false,5);
 	}
 }
-
 void AHumanCharacter::Tick(float DeltaSeconds)
 {
 
 	Super::Tick(DeltaSeconds);
 
 	//move flashlight for clients
-	if(HasAuthority() && Flashlight != nullptr && FPSCam != nullptr && Flashlight->IsVisible())
+	if(HasAuthority() && Flashlight != nullptr)
 	{
 		FRotator relRot = Flashlight->GetRelativeRotation();
-		Flashlight->SetRelativeRotation(FRotator(GetControlRotation().Pitch,relRot.Roll,relRot.Yaw));
-	} 
+		float pitch = GetControlRotation().Pitch;
+		if(pitch <= 338 && pitch >= 270)
+		{
+			pitch = 338;
+		}
+		else if(pitch <= 90 && pitch >= 27)
+		{
+			pitch = 27;
+		}
+		
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red,GetName() + "'s Pitch: '" + FString::SanitizeFloat(GetControlRotation().Pitch));
+		Flashlight->SetRelativeRotation(FRotator(pitch,relRot.Roll,relRot.Yaw));
+	}
 }
 
 void AHumanCharacter::BeginPlay()
