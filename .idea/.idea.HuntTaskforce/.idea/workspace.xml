@@ -7,8 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="def18e5f-0ca1-457e-9c3b-f8b7d76fdfc2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HuntTaskforce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuntTaskforce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Character/Human/HumanC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/HumanC.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Character/Human/Anims/Locomotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/Anims/Locomotion.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Character/Human/BasicCharacter_PhysicsAsset.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/BasicCharacter_PhysicsAsset.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Character/Human/Human_ABP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/Human_ABP.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -265,7 +268,7 @@
       <workItem from="1661899841051" duration="8521000" />
       <workItem from="1661970937562" duration="5629000" />
       <workItem from="1662003450044" duration="1000" />
-      <workItem from="1662047731760" duration="16462000" />
+      <workItem from="1662047731760" duration="21706000" />
     </task>
     <servers />
   </component>

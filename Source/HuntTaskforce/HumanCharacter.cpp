@@ -73,7 +73,7 @@ void AHumanCharacter::Tick(float DeltaSeconds)
 			pitch = 27;
 		}
 		
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red,GetName() + "'s Pitch: '" + FString::SanitizeFloat(GetControlRotation().Pitch));
+		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red,GetName() + "'s Pitch: '" + FString::SanitizeFloat(GetControlRotation().Pitch));
 		Flashlight->SetRelativeRotation(FRotator(pitch,relRot.Roll,relRot.Yaw));
 	}
 }

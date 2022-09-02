@@ -12,7 +12,6 @@
 #include "GameFramework/InputSettings.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "Kismet/GameplayStatics.h"
-#include "Net/UnrealNetwork.h"
 #include "MotionControllerComponent.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
 #include "Components/SpotLightComponent.h"
@@ -33,6 +32,23 @@ void AHuntTaskforceCharacter::onStart(){}
 void AHuntTaskforceCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
+}
+
+//returns if moving backgrounds or forwards
+float AHuntTaskforceCharacter::getForwardSpeed()
+{
+	FVector vel = GetActorRotation().Vector() * GetVelocity();
+	if(vel.Y > 0) return 1;
+	else if(vel.Y < 0) return -1;
+	else return 0;
+}
+
+float AHuntTaskforceCharacter::getRightSpeed()
+{
+	FVector vel = GetActorRotation().Vector() * GetVelocity();
+	if(vel.X > 0) return 1;
+	else if(vel.X < 0) return -1;
+	else return 0;
 }
 
 AHuntTaskforceCharacter::AHuntTaskforceCharacter()
@@ -74,14 +90,6 @@ void AHuntTaskforceCharacter::BeginPlay()
 //////////////////////////////////////////////////////////////////////////
 // Input
 
-void AHuntTaskforceCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
-{
-	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-
-	DOREPLIFETIME_CONDITION(AHuntTaskforceCharacter,forwardSpeed,COND_SkipOwner);
-	DOREPLIFETIME_CONDITION(AHuntTaskforceCharacter,rightSpeed,COND_SkipOwner);
-}
-
 void AHuntTaskforceCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	// set up gameplay key bindings
@@ -109,24 +117,13 @@ void AHuntTaskforceCharacter::MoveForward(float Value)
 {
 	if (IsLocallyControlled())
 	{
-		forwardSpeed = Value;
-		if (Value != 0.0f)
-		{
-			// add movement in that direction
-			AddMovementInput(GetActorForwardVector(), Value);
-		}
+		AddMovementInput(GetActorForwardVector(), Value);
 	}
 }
-
 void AHuntTaskforceCharacter::MoveRight(float Value)
 {
 	if (IsLocallyControlled())
 	{
-		rightSpeed = Value;
-		if (Value != 0.0f)
-		{
-			// add movement in that direction
-			AddMovementInput(GetActorRightVector(), Value);
-		}
+		AddMovementInput(GetActorRightVector(), Value);
 	}
 }

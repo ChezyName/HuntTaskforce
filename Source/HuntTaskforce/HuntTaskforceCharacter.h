@@ -44,10 +44,11 @@ public:
 
 	void Tick(float DeltaSeconds) override;
 
-	UPROPERTY(Replicated,BlueprintReadOnly)
-	float forwardSpeed = 0;
-	UPROPERTY(Replicated,BlueprintReadOnly)
-	float rightSpeed = 0;
+	UFUNCTION(BlueprintCallable)
+	float getForwardSpeed();
+
+	UFUNCTION(BlueprintCallable)
+	float getRightSpeed();
 protected:
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
