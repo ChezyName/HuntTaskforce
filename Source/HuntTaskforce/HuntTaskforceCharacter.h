@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Sound/SoundWaveProcedural.h"
 #include "HuntTaskforceCharacter.generated.h"
 
 class UInputComponent;
@@ -18,9 +19,6 @@ UCLASS(config=Game)
 class AHuntTaskforceCharacter : public ACharacter
 {
 	GENERATED_BODY()
-	/** First person camera */
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-	UCameraComponent* FirstPersonCameraComponent;
 
 public:
 	AHuntTaskforceCharacter();
@@ -52,6 +50,10 @@ public:
 protected:
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
+
+	/** First person camera */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+	UCameraComponent* FirstPersonCameraComponent;
 
 	/** Handles stafing movement, left and right */
 	void MoveRight(float Val);

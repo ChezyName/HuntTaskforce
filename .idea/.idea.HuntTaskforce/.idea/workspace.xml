@@ -6,9 +6,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="def18e5f-0ca1-457e-9c3b-f8b7d76fdfc2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HuntTaskforce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuntTaskforce/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Character/Human/Anims/Locomotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/Anims/Locomotion.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Character/Human/BasicCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/BasicCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Character/Human/HumanC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/HumanC.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Character/Human/Human_ABP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/Human_ABP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Levels/StarterMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/StarterMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/MainGM.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MainGM.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/OnlineSubsystem/MainMenu_UI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/OnlineSubsystem/MainMenu_UI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_AssetPlatform.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_AssetPlatform.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforce.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforce.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +33,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2E5gxnhW6UlENrGwFZmiTDo8S8T" />
   <component name="ProjectViewState">
@@ -266,6 +281,13 @@
       <workItem from="1662003450044" duration="1000" />
       <workItem from="1662047731760" duration="21706000" />
       <workItem from="1662100770076" duration="145000" />
+      <workItem from="1662156209894" duration="1013000" />
+      <workItem from="1662169729456" duration="2978000" />
+      <workItem from="1662185244306" duration="9620000" />
+      <workItem from="1662232350650" duration="1261000" />
+      <workItem from="1662252430245" duration="1652000" />
+      <workItem from="1662254343698" duration="2118000" />
+      <workItem from="1662269985945" duration="394000" />
     </task>
     <servers />
   </component>

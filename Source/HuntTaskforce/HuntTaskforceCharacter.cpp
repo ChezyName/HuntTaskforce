@@ -13,6 +13,7 @@
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "Kismet/GameplayStatics.h"
 #include "MotionControllerComponent.h"
+#include "VoiceModule.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
 #include "Components/SpotLightComponent.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -92,25 +93,28 @@ void AHuntTaskforceCharacter::BeginPlay()
 
 void AHuntTaskforceCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
-	// set up gameplay key bindings
-	check(PlayerInputComponent);
+	if(IsLocallyControlled())
+	{
+		// set up gameplay key bindings
+		check(PlayerInputComponent);
 
-	// Bind jump events
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+		// Bind jump events
+		PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
+		PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
-	PlayerInputComponent->BindAction("Ability", IE_Pressed, this, &AHuntTaskforceCharacter::onAbility);
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AHuntTaskforceCharacter::onAttack);
+		PlayerInputComponent->BindAction("Ability", IE_Pressed, this, &AHuntTaskforceCharacter::onAbility);
+		PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AHuntTaskforceCharacter::onAttack);
 
-	// Bind movement events
-	PlayerInputComponent->BindAxis("MoveForward", this, &AHuntTaskforceCharacter::MoveForward);
-	PlayerInputComponent->BindAxis("MoveRight", this, &AHuntTaskforceCharacter::MoveRight);
+		// Bind movement events
+		PlayerInputComponent->BindAxis("MoveForward", this, &AHuntTaskforceCharacter::MoveForward);
+		PlayerInputComponent->BindAxis("MoveRight", this, &AHuntTaskforceCharacter::MoveRight);
 
-	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
-	// "turn" handles devices that provide an absolute delta, such as a mouse.
-	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
-	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
-	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+		// We have 2 versions of the rotation bindings to handle different kinds of devices differently
+		// "turn" handles devices that provide an absolute delta, such as a mouse.
+		// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
+		PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+		PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+	}
 }
 
 void AHuntTaskforceCharacter::MoveForward(float Value)

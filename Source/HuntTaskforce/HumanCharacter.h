@@ -14,10 +14,10 @@ class HUNTTASKFORCE_API AHumanCharacter : public AHuntTaskforceCharacter
 {
 	GENERATED_BODY()
 
-	bool DoTrace(FHitResult* RV_Hit, FCollisionQueryParams* RV_TraceParams);
+	bool DoTrace(FHitResult* RV_Hit, FCollisionQueryParams* RV_TraceParams,FVector CameraLoc,FRotator CameraRot);
 
 	UFUNCTION(Server,Reliable)
-	void FireShot();
+	void FireShot(FVector camLoc,FRotator camRot);
 
 	void Tick(float DeltaSeconds) override;
 	void BeginPlay() override;

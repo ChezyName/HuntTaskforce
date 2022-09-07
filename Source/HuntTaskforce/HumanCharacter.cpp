@@ -6,7 +6,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/SpotLightComponent.h"
 
-bool AHumanCharacter::DoTrace(FHitResult* RV_Hit, FCollisionQueryParams* RV_TraceParams)
+bool AHumanCharacter::DoTrace(FHitResult* RV_Hit, FCollisionQueryParams* RV_TraceParams,FVector CameraLoc,FRotator CameraRot)
 {
 	if (Controller == NULL) // access the controller, make sure we have one
 		{
@@ -14,9 +14,11 @@ bool AHumanCharacter::DoTrace(FHitResult* RV_Hit, FCollisionQueryParams* RV_Trac
 		}
 
 	// get the camera transform
+	/*
 	FVector CameraLoc;
 	FRotator CameraRot;
 	GetActorEyesViewPoint(CameraLoc, CameraRot);
+	*/
 
 	FVector Start = CameraLoc;
 	// you need to add a uproperty to the header file for a float PlayerInteractionDistance
@@ -38,13 +40,13 @@ bool AHumanCharacter::DoTrace(FHitResult* RV_Hit, FCollisionQueryParams* RV_Trac
 	return DidTrace;
 }
 
-void AHumanCharacter::FireShot_Implementation(){
+void AHumanCharacter::FireShot_Implementation(FVector camLoc,FRotator camRot){
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red,  GetName() + " Is Trying To Fire A Shot.");
 	
 	FHitResult RV_Hit(ForceInit);
 	FCollisionQueryParams RV_TraceParams = FCollisionQueryParams(FName(TEXT("RV_Trace")), true, this);
 	RV_TraceParams.AddIgnoredActor(this);
-	DoTrace(&RV_Hit, &RV_TraceParams);
+	DoTrace(&RV_Hit, &RV_TraceParams,camLoc,camRot);
 
 	//Debug / Testing
 	if(RV_Hit.Actor != nullptr)
@@ -88,7 +90,7 @@ void AHumanCharacter::BeginPlay()
 void AHumanCharacter::onAttack()
 {
 	//Attack / LMB
-	FireShot_Implementation();
+	FireShot_Implementation(FirstPersonCameraComponent->GetComponentLocation(),FirstPersonCameraComponent->GetComponentRotation());
 	Super::onAttack();
 }
 
