@@ -6,21 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="def18e5f-0ca1-457e-9c3b-f8b7d76fdfc2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HuntTaskforce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HuntTaskforce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Character/Human/Anims/Locomotion.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/Anims/Locomotion.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/Character/Human/BasicCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/BasicCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Character/Human/HumanC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Character/Human/HumanC.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/Levels/StarterMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Levels/StarterMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/MainGM.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/MainGM.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/OnlineSubsystem/MainMenu_UI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/OnlineSubsystem/MainMenu_UI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Architecture/Floor_400x400.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/StarterContent/Materials/M_AssetPlatform.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/StarterContent/Materials/M_AssetPlatform.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HumanCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforce.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforce.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/HuntTaskforce/HuntTaskforceCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -288,6 +277,7 @@
       <workItem from="1662252430245" duration="1652000" />
       <workItem from="1662254343698" duration="2118000" />
       <workItem from="1662269985945" duration="394000" />
+      <workItem from="1664168405691" duration="6000" />
     </task>
     <servers />
   </component>
