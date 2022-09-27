@@ -102,6 +102,10 @@ void AHuntTaskforceCharacter::SetupPlayerInputComponent(class UInputComponent* P
 		PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 		PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
+		// Bind crouch Events
+		PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &AHuntTaskforceCharacter::onCrouchStart);
+        PlayerInputComponent->BindAction("Crouch", IE_Released, this, &AHuntTaskforceCharacter::onCrouchEnd);
+
 		PlayerInputComponent->BindAction("Ability", IE_Pressed, this, &AHuntTaskforceCharacter::onAbility);
 		PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AHuntTaskforceCharacter::onAttack);
 
@@ -116,6 +120,20 @@ void AHuntTaskforceCharacter::SetupPlayerInputComponent(class UInputComponent* P
 		PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 	}
 }
+void AHuntTaskforceCharacter::onCrouchStart()
+{
+	isCrouching = true;
+	Crouch();
+}
+
+void AHuntTaskforceCharacter::onCrouchEnd()
+{
+	isCrouching = false;
+	UnCrouch();
+}
+
+
+
 
 void AHuntTaskforceCharacter::MoveForward(float Value)
 {

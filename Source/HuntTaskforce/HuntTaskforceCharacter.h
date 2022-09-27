@@ -47,6 +47,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	float getRightSpeed();
+
+	UPROPERTY(BlueprintReadOnly)
+	bool isCrouching;
 protected:
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
@@ -59,5 +62,8 @@ protected:
 	void MoveRight(float Val);
 	// APawn interface
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
+
+	void onCrouchStart();
+	void onCrouchEnd();
 };
 
